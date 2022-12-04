@@ -1,6 +1,6 @@
 # Project 2
 
-### 1. The name and UNI of both teammates.
+### 1. Name and UNI of Both Teammates.
 
 Ruoyang Liu: rl3323
 
@@ -8,17 +8,17 @@ Kyurang Kang: kk3583
 
   
 
-### 2. The name of the PostgreSQL account where your database is on our server.
+### 2. Name of PostgreSQL Account Where Your Database is on Our Server.
 
 kk3583
 
   
 
-### 3. New items added & Rationale Behind Each Modification:
+### 3. New Items Added & Rationale Behind Each Modification:
 
-#### a. text attribute
+#### a. Text Attribute
 
-We add a text attribute `storyline` in the table `Contents.` This attribute holds a long textual description of the storyline of each movie or show. We want to add this attribute because in addition to the genres of a movie or show, we may want to find celebrities who have acted in a movie with or as some specific elements or roles, for example with a dragon, or as a family member.
+We add a text attribute `storyline` in the table `Contents.` This attribute holds a long textual description of the storyline of each movie or show. We want to add this attribute because, in addition to the genres of a movie or show, we may want to find celebrities who have acted in a movie with or as some specific elements or roles, for example with a dragon, or as a family member. This will be useful for getting to know the images or persona of an actor when media workers are trying to find appropriate actors for their content.
 
   
 
@@ -95,11 +95,10 @@ cid | name
   
   
 
-#### b. Array attribute
+#### b. Array Attribute
 
-We add an array attribute `first_4_week_box_office_domestic` in the table `Movies.` This attribute holds an array of 4 real numbers which shows the first 4 week of the movie's domestic box office upon its release. We want to add this attribute because in addition to the total worldwide box office of a movie, we are also interested in seeing if the movie got more and more popular after it released or it faded quickly in the movie market. This characteristic can help us find staffs that have produced high quality movies that stays popular over the first month of their release.
+We add an array attribute `first_4_week_box_office_domestic` in the table `Movies.` This attribute holds an array of 4 real numbers which shows the first 4 week of the movie's domestic box office upon its release. We want to add this attribute because in addition to the total worldwide box office of a movie, we are also interested in seeing if the movie got more and more popular after its release or it faded quickly; how fast and how much it dropped or increased in the movie market. This characteristic can help us find staffs that have produced high quality movies that stayed popular over the first month of their release.
 
-  
 
 Here is an example scenario and query that involve this new attribute:
 
@@ -163,7 +162,7 @@ sid | name
 
 #### c. Trigger
 
-Finally, we added a trigger to check the attributes of contents data when user insert new rows to `Contents` table or update attributes to the existing rows. Since there are many constraints on the attribute of contents, we want to check them all using the trigger before inserting them into our table. Bad rows including having a `Null` value for `title`, having a `release_date` later than today's date, having a `motion picture rate (mpr)` other than the predefined ones, having an `imdb_rating` out of range 0 to 10, and having a negative number for `num_of_reviews`. When inserting a new row or update an attribute of existing row in the table `Contents` that has any one of the above bad conditions will trigger our trigger and the trigger will reject the insertion or update. Otherwise, the insertion and update will be successful.
+Finally, we added a trigger to check the attributes of contents data when user insert new rows to `Contents` table or update attributes to the existing rows. Since there are many constraints on the attribute of contents, we want to check them all using the trigger before inserting or updating them into our table. Bad rows including having a `Null` value for `title`, having a `release_date` later than today's date, having a `motion picture rate (mpr)` other than the predefined ones, having an `imdb_rating` out of range: 0 to 10, and having a negative number for `num_of_reviews`. When inserting a new row or updating an attribute of existing row in the table `Contents` that has any one of the above bad conditions will trigger our trigger and the trigger will reject the insertion or update. Otherwise, the insertion and update will be successful.
 
   
 
