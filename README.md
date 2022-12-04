@@ -14,7 +14,7 @@ kk3583
 
   
 
-### 3. New items added:
+### 3. New items added & Rationale Behind Each Modification:
 
 #### a. text attribute
 
@@ -97,7 +97,7 @@ cid | name
 
 #### b. Array attribute
 
-We add an array attribute `first_4_week_box_office_domestic` in the table `Movies.` This attribute holds an array of 4 real numbers which shows the first 4 week of the movie's domestic box office upon its release. We want to add this attribute because in addition to the total worldwide box office of a movie, we are also interested in seeing if the movie got more and more popular after it released or it faded quickly in the movie market. This characteristic can help us find staffs that have produced high quality movies that stays popular over the first month of it release.
+We add an array attribute `first_4_week_box_office_domestic` in the table `Movies.` This attribute holds an array of 4 real numbers which shows the first 4 week of the movie's domestic box office upon its release. We want to add this attribute because in addition to the total worldwide box office of a movie, we are also interested in seeing if the movie got more and more popular after it released or it faded quickly in the movie market. This characteristic can help us find staffs that have produced high quality movies that stays popular over the first month of their release.
 
   
 
