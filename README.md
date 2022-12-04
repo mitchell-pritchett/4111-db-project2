@@ -171,28 +171,29 @@ Here are some example queries that our trigger will reject the action.
 
   
 
-a `NULL` title:
+- a `NULL` title:
 
 `INSERT INTO Contents VALUES (100,NULL,'2000-2-2','R',5,100);`
 
 **![](https://lh3.googleusercontent.com/Kri-WR2R2fzPaUEZkRjtnXPo3yt8znkDX4ZRsr9NkB2UcgsCaAn5nInGLpArV0x5FJL_XYSLjA_hv5HJb4_eM9DjFYi2uqU9zB-RGsTKiCh7YnyfH3lhpDxOUEa2k6dakC1Ah7hwG82L8hweGaZhuDdXTQkcgxyyVxU_0hrG5jS7MPtvsFA3y-bGAXNOXw)**
 
-an invalid `release_date`:
+- an invalid `release_date`:
 `UPDATE Contents SET release_date = '2023-01-01' where conid = 1;`
 **![](https://lh4.googleusercontent.com/mi9cW27ywI1MdxzqCdVzoAtyMq-ArZXZ9u18lrGaeQRLaWUs2geIA3kMoKzbLkb9wMpqcOOkTHwDEYpvVQAqDY1WnFVpqJYXOKyWYySgbDfiPAyjtcW1FJNxhkN6tqI6r4vG6Ags8Mow1sg9RxWq4_2WRhSyQUf9DUMeg-2OBxY7npnTMNHLxpiVmg4QAA)**
-an invalid `mpr`:
+
+- an invalid `mpr`:
 
 `INSERT INTO Contents VALUES (100,'example','2000-2-2','R-18',5,100);`
 
 **![](https://lh3.googleusercontent.com/vaukP4vh0kGjYubTY8MxHOJ6OXulE7Uh2WQaZ3b2dF1M0h75JddpDe0e7Owx5bW4jI1ha5jQXNS30JazbNjhR3GSUXkm3OKTkBS377BRi6aaAy9_X1kl5NVYXQb-yfhuAC7FJncL4zszkEfvIkI_LMDDOUJkAmXh6fikwKBEVgmw5FMX3NckxKPg90WzJA)**
 
-an invalid `imdb_rating`:
+- an invalid `imdb_rating`:
 
 `INSERT INTO Contents VALUES (100,'example','2000-2-2','R',-5,100);`
 
 **![](https://lh3.googleusercontent.com/bX2PQIUQQJcfzWwm9WqXh1QbrVFDF38QZg6jR4LuaX5PMeHQ1uIRk9C-bV_FG-ttjzEkGAxUr6_8Xbjw9x26hgqZOv88h0EVFURqvujd1Rjp764riOYIQdgNmjR3uqs0ljpffbv4-7-7VePBJzjyEDY-9HvxI3FhUEiqwmua5o2cM64jm3Tb7iak9aVMMA)**
 
-an invalid `num_of_reviews`:
+- an invalid `num_of_reviews`:
 
 `INSERT INTO Contents VALUES (100,'hi','2000-2-2','R',5,-9);`
 
