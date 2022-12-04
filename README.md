@@ -103,7 +103,7 @@ We add an array attribute `first_4_week_box_office_domestic` in the table `Movie
 
 Here is an example scenario and query that involve this new attribute:
 
-For example, if we want to find all directors who have directed a movie that stayed popular during the first month of its release. Since some movies are released at the end of a week, we used the difference between the 4th week's domestic box office and the maximum of the first and the second week's domestic box office to get the relative change. Here, we want the drop to be less than 50p%. The query is as follow:
+For example, if we want to find all directors who have directed a movie that stayed popular during the first month of its release. Since some movies are released at the end of a week, we used the difference between the 4th week's domestic box office and the maximum of the first and the second week's domestic box office to get the relative change. Here, we want the drop to be less than 50%p. The query is as follow:
 
   
 ```
