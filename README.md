@@ -179,6 +179,7 @@ Here are some example queries that our trigger will reject the action.
 
 - an invalid `release_date`:
 `UPDATE Contents SET release_date = '2023-01-01' where conid = 1;`
+
 **![](https://lh4.googleusercontent.com/mi9cW27ywI1MdxzqCdVzoAtyMq-ArZXZ9u18lrGaeQRLaWUs2geIA3kMoKzbLkb9wMpqcOOkTHwDEYpvVQAqDY1WnFVpqJYXOKyWYySgbDfiPAyjtcW1FJNxhkN6tqI6r4vG6Ags8Mow1sg9RxWq4_2WRhSyQUf9DUMeg-2OBxY7npnTMNHLxpiVmg4QAA)**
 
 - an invalid `mpr`:
